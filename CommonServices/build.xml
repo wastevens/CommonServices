@@ -3,6 +3,12 @@
 
 <property file="build.properties"/>
 
+<mkdir dir="${lib.dir}"/>
+<mkdir dir="${build.dir}"/>
+<mkdir dir="${classes.dir}"/>
+<mkdir dir="${dist.dir}"/>
+<mkdir dir="${src.dir}/resources"/>
+	
 <path id="classpath">
   <pathelement path="${classpath}"/>
   <fileset dir="${lib.dir}">
@@ -10,6 +16,9 @@
     <exclude name="**/*javadoc*"/>
     <exclude name="**/*source*"/>
     <exclude name="**/*test*"/>
+  </fileset>
+  <fileset dir="${src.dir}/resources">
+    <include name="**/*.xml"/>
   </fileset>
 </path>
 
