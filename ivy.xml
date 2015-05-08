@@ -5,6 +5,9 @@
       <conf name="sources" visibility="public"/>
       <conf name="javadoc" visibility="public"/>
       <conf name="test" visibility="private"/>
+      <conf name="testDefault" visibility="private"/>
+      <conf name="testSources" visibility="private"/>
+      <conf name="testJavadoc" visibility="private"/>
     </configurations>
     <publications>
       <artifact name="${project.name}" conf="default"/>
@@ -13,5 +16,6 @@
     <dependencies>
         <dependency org="com.google.code.gson" name="gson" rev="2.2.4" conf="default;sources;javadoc"/>
         <dependency org="org.springframework" name="spring-context" rev="4.0.3.RELEASE" conf="default;sources;javadoc"/>
+        <dependency org="com.dstevens" name="TheWheel" rev="latest.release" conf="default;sources"/>
     </dependencies>
 </ivy-module>
