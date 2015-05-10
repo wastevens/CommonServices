@@ -39,11 +39,17 @@ public class GsonSupplierTest {
 		}
 	}
 	
+	public static class Foo {
+		TestableEnum p = TestableEnum.A;
+	}
+	
 	@Test
 	public void testJsonizeEnum() {
 		Gson gson = new GsonSupplier().get();
 		List<TestableEnum> list = list(TestableEnum.values());
 		System.out.println(gson.toJson(list));
+		System.out.println(gson.toJson(TestableEnum.A));
+		System.out.println(gson.toJson(new Foo()));
 	}
 	
 }
